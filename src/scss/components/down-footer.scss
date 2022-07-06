@@ -1,0 +1,186 @@
+.down {
+
+    &__cogntatulations {
+        position: absolute;
+        bottom: 0;
+        @media (max-width: 1180px) {
+            display: none;
+		}
+    }
+
+    &__left-icon {
+        right: 0;
+    }
+
+
+    &__right-icon {
+        left: 0;
+    }
+}
+.down-footer {
+    background-color:  #1E212C;
+    color: rgb(131, 131, 131);
+    padding: 80px 0px 80px 0px;
+    .text-links {
+        p {
+            padding: 25px 0px 40px 0px;
+            
+        }
+    }
+    .row-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        font-size: rem(25);
+    
+        a:hover { 
+            color:white;
+            transition: all 0.5s;
+        }
+    }
+    
+    &__content {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 690px) {
+            justify-content:center;
+        }
+    }
+    .text-create {
+        flex: 0 0 300px;
+
+    }
+    &__column {
+        padding-top: 15px;
+    }
+    .input {
+        flex: 0 1 300px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        height: 45px;
+        outline: none;
+        padding-left: 15px;
+        color:#9A9CA5;
+    }
+    
+
+    &__about {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        display: flex;
+        width: 1100px;
+        padding: 10px 10px 0px 80px;
+        gap: 20px;
+
+        @media (max-width: 453px) {
+            flex-direction: column;
+            padding-left: 50px;
+        }
+        @media (max-width: 690px) {
+            padding-left: 10px;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        .header-h {
+            position: relative;
+            @media (max-width: 453px) {
+                &::after {
+                    right: 0;
+                    transition: transform 0.3s;
+                    position: absolute;
+                    content: url('../img/icons/arrow-right.svg');
+                }
+                &.active {
+                    &::after {
+                        transition: transform 0.3s;
+                        transform: rotate(90deg);
+                    } 
+                }
+            }
+           
+        }
+
+        a:hover {
+            color:white;
+            transition: all 0.5s;
+        }
+
+        a {
+            padding: 10px 10px 10px 0px;
+        }
+        li {
+            padding: 10px 0px 5px 0px;
+            font-size: rem(18);
+        }
+        @media (max-width: 453px) {
+            .list-adapt {
+                transform: translateX(-100%);
+                transition: all 0.3s;
+                height: 10px;
+    
+                &.active {
+                    transform: translateX(0%);
+                    transition: all 0.3s;
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    &__email {
+        padding-top: 15px;
+        display: flex;
+        align-self: flex-start;
+        flex-direction: column;
+        .email-content {
+            padding: 30px 0px 20px 0px;
+        }
+        .emailbtn {
+            position: relative;
+            width: 300px;
+            display: flex;
+        }
+        h1 {
+            font-weight: 700;
+            color:#fff;
+            letter-spacing: 1px;
+        }
+        p {
+            color:white;
+        }
+        .input-btn {
+            background-color:  #9A9CA5;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            color:#fff;
+        }
+        ._icon-arrow-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: rem(45);
+            padding: 10px 10px 10px 10px;
+            color:white;
+        }
+    }
+    .header-li {
+        color:white;
+        font-size: rem(16);
+        font-weight: 700;
+    }
+    ._icon-mail {
+        display: inline-flex;
+    }
+    
+}
+
+
+

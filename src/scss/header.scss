@@ -1,0 +1,335 @@
+.account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+
+    a {
+        font-weight: 700;
+        &:hover {
+            transition: all 0.4s;
+            color:$buttonColor;
+        }
+    }
+    .log-in { 
+        display: flex;
+        align-items: center;
+
+
+        &::before {
+            
+            content: url('../img/icons/account.svg')
+        }
+    }
+    .pp {
+        padding: 0px 5px 0px 5px;
+    }
+}
+
+
+._icon-account {
+    font-size: rem(20);
+
+}
+
+
+.button-header {
+    margin-right: rem(10);
+    padding: 15px 40px;
+    @include adaptiveValue("padding-right",40 ,15 );
+    @include adaptiveValue("padding-left",40 ,15 );
+
+} 
+
+.header-content {
+
+    margin-top: rem(150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("gap",160 ,10 );
+    flex-wrap: wrap;
+    
+
+    &__left-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    &__right-block {
+
+        
+    }
+}
+.left-block {
+
+    &__button {
+        padding-bottom: rem(30);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        &:hover {
+            transition: all 0.4s;
+            color:$buttonColor;
+        }
+    }
+
+    &__text {
+        padding: 20px 0px 60px 0px;
+        font-weight: 900;
+        font-size: 64px;
+    }
+
+    &__buttons {
+        padding-top: rem(30);
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-wrap: wrap;
+        @include adaptiveValue("gap",20 ,10 );
+
+        .button {
+            padding: 15px 40px;
+        }
+        @media (max-width: $mobile) {
+            justify-content: center;
+        }
+    }
+}
+.button_inherit {
+    padding: 15px 40px;
+}
+.right-block {
+
+    &__image {
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.header-content {
+
+    &__container {}
+
+    &__stat {
+        padding: 180px 0px 80px 0px;
+        display: flex;
+
+        @include adaptiveValue("gap",50 ,10 );
+
+        @media (max-width: em(670)){
+              flex-wrap: wrap;
+              justify-content: center;
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: flex;
+            flex: 0;
+            padding: 0px 60px 0px 60px;
+            @media (max-width: em(1100)){
+                  display: none;
+            }
+        }
+
+    }
+}
+.block {
+
+    &__text-header {
+        font-weight: 900;
+        font-size: rem(46);
+    }
+
+    &__text {
+        padding-left: 10px;
+        font-weight: 400;
+        font-size: rem(16);
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NavBar + Burger ==========================================================================================
+body._lock {
+    overflow: hidden;
+}
+.main-header {
+    background-image: url('../img/bg/background-header-main.png');
+    background-color: none;
+    padding: 10px 0px 10px 0px;
+}
+.header {
+    
+		&__container {
+            height: rem(40);
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+		&__logo {
+            
+        }
+
+		&__menu {
+            display: flex;
+            flex: 1 1 auto;
+            @include adaptiveValue("padding-left",20 ,0 );
+        }
+
+		&__menu-main {
+
+        }
+}
+.menu {
+
+		&__list {
+            display: flex;
+            flex-wrap: wrap;
+            @include adaptiveValue("gap",5 ,0 );
+            @media (max-width: $mobile){
+                  color:white;
+                  flex-direction: column;
+                  align-items: center;
+                  li{
+                      margin-bottom: rem(50);
+                  }
+                  &::before {
+                      content: "";
+                      position: fixed;
+                      width: 100%;
+                      top: 0;
+                      left: 0;
+                      height: rem(60);
+                      background-color: none;
+                  }       
+            }
+        }
+
+		&__link {
+            font-weight: 700;
+            font-size: rem(16);
+            line-height: 160%;
+            padding: rem(14) rem(14) rem(14) rem(14);
+            @media (max-width: $mobile){
+                  font-size: rem(24);
+            }
+            &:hover {
+                transition: all 0.3s;
+                color:$buttonColor;
+            }
+        }
+}
+.menu__icon {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		flex: 0 0 35px;
+		height: rem(22);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+            left: 0;
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: $mainColor;
+		}
+		&::before,
+		&::after {
+            content:"";
+            
+        }
+        &::before {
+            top: 0;
+            width: 50%;
+        }
+        &::after {
+            width: 90%;
+            bottom: 0;
+        }
+        & span {
+            width: 80%;
+            top: 50%;
+            transform: scale(1) translate(0px,-50%);
+        }
+        &._active span {
+            width: 100%;
+            transform: scale(0) translate(0px,-50%);
+        }
+        &._active::before {
+            width: 100%;
+            top: 50%;
+            transform: rotate(-45deg) translate(0px,-50%);
+        }
+        &._active::after {
+            width: 100%;
+            top: 50%;
+            transform: rotate(45deg) translate(0px,-50%);
+        }
+        
+	}
+}
+.header__menu-main._active {
+    left: 0;
+}
+@media (max-width: $mobile) {
+    .header__menu-main {
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(65, 61, 61, 0.8);
+        padding: rem(150) rem(30) rem(30) rem(30);
+        transition: left 0.3s ease 0s;
+    }
+    .header__logo {
+        z-index: 5;
+    }
+    
+}

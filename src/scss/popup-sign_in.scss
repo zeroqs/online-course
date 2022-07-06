@@ -1,0 +1,170 @@
+.sign-in {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(65, 61, 61, 0.8);
+    z-index: 2;
+    display: none;
+    &.active {
+        display: block;
+        padding-top: 50px;
+        overflow: auto;
+        
+    }
+
+    &__contein {
+        display: flex;
+        width: 100%;
+        
+        height: 100%;
+    }
+
+    &__body {
+        
+        margin: auto;
+        width: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        position: relative;
+        padding: 50px 50px 50px 50px;
+
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            text-align: center;
+        }
+        span {
+            text-align: center;
+            display: inline-block;
+            font-weight: 400;
+            font-size: 14px;
+            color:#787A80;
+            padding: 24px 0px 24px 0px;
+        }
+        input {
+            display: block;
+            padding-bottom: 20px;
+            border: 1px solid #D7DADD;
+            border-radius: 4px;
+            width: 100%;
+            padding: 10px 15px;
+            outline: none;
+            color:#787A80;
+        }
+        label {
+            display: inline-block;
+            padding-bottom: 8px;
+            font-weight: 200;
+            color:#424551;
+        }
+        .pwd {
+            padding-top: 20px;
+        }
+    }
+}
+.close-in {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.3125rem;
+}
+.optional {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .checkbox {
+        position: relative;
+        width: 1.5625rem;
+        margin-right: 0;
+    }
+    .keep {
+        display: flex;
+        align-items: center;
+        label {
+            padding: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+       
+    }
+    .fogPass {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: #FF3F3A;
+    }
+}
+.button-sign {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    
+    .sign-text {
+        padding: 15px 116px;
+        font-weight: 700;
+        color:#ffff;
+        &:hover {
+            color: $buttonColor;
+        }
+    }
+}
+.reg {
+    display: inline-block;
+    padding-top: 15px;
+    color: #FF3F3A;
+    font-weight: 400;
+    padding-bottom: 15px;
+
+    &::before {
+        color:$mainColor;
+        padding-right: 5px;
+        content: "Don't have an account?";
+    }
+}
+
+.media {
+    
+    min-height: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #E5E8ED;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        padding-bottom: 20px;
+        color:#787A80;
+    }
+
+    .links {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+
+        a {
+            font-size: 25px;
+            color: #787A80; 
+
+            &:hover { 
+                color:$buttonColor;
+                transition: all 0.5s;
+
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html', { "title": "Courses" })
+    <body>
+        <div class="wrapper">
+            @@include('html/loader.html', {})
+            <section style="padding: 10px 0px 0px 0px;" class="section-header">
+                @@include('html/header-menu.html', {})
+            </section>
+            <main class="page-course">
+
+                    <div class="mid__container">
+                        <section class="course">
+                            <div class="course__header">
+                                <span>Enjoy your studying!</span>
+                                <h1>Our online courses</h1>
+                            </div>
+                            <div class="course__catalog">
+                                <section class="cards-row">
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-8.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_marketing">Marketing</p>
+                                            <h1 class="about-header">
+                                                The Ultimate Google Ads Training Course
+                                            </h1>
+                                            <p class="price">$100</p>
+                                        </div>
+                                    </a>
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-7.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_management">Management</p>
+                                            <h1 class="about-header">
+                                                Prduct Management Fundamentals
+                                            </h1>
+                                            <p class="price">$480</p>
+                                        </div>
+                                    </a>
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-6.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_hr">HR & Recruting</p>
+                                            <h1 class="about-header">
+                                                HR  Management and Analytics
+                                            </h1>
+                                            <p class="price">$200</p>
+                                        </div>
+                                    </a>
+                                </section>
+                                <section style="padding: 20px 0px;" class="cards-row">
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-8.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_marketing">Marketing</p>
+                                            <h1 class="about-header">
+                                                The Ultimate Google Ads Training Course
+                                            </h1>
+                                            <p class="price">$100</p>
+                                        </div>
+                                    </a>
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-4.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_design">Design</p>
+                                            <h1 class="about-header">
+                                                Graphic Design Basic Training Course
+                                            </h1>
+                                            <p class="price">$500</p>
+                                        </div>
+                                    </a>
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-3.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_management">Management</p>
+                                            <h1 class="about-header">
+                                                Business Development Management
+                                            </h1>
+                                            <p class="price">$400</p>
+                                        </div>
+                                    </a>
+                                </section>
+                                <section class="cards-row">
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-3.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_marketing">Design</p>
+                                            <h1 class="about-header">
+                                                Graphic Design Basic Training Course
+                                            </h1>
+                                            <p class="price">$500</p>
+                                        </div>
+                                    </a>
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-7.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_management">Management</p>
+                                            <h1 class="about-header">
+                                                Prduct Management Fundamentals
+                                            </h1>
+                                            <p class="price">$480</p>
+                                        </div>
+                                    </a>
+                                    <a href="course-self-page.html" class="card-personal course-card">
+                                        <img class="personal-image course-card-image" src="@img/course/card/image-6.png" alt="personal-photo">
+                                        <div class="personal-about about-course-cards">
+                                            <p class="category category_hr">HR & Recruting</p>
+                                            <h1 class="about-header">
+                                                HR  Management and Analytics
+                                            </h1>
+                                            <p class="price">$200</p>
+                                        </div>
+                                    </a>
+                                </section>
+                            </div>
+                        </section>
+                        @@include('html/components/certificate.html', {})
+                        @@include('html/components/review.html', {})
+                    </div>
+            </main>
+            @@include('html/main-footer.html', {})
+            @@include('html/popup-sign_in.html', {})
+            @@include('html/popup-sign_up.html', {})
+        </div>
+        @@include('html/js.html',{})
+    </body>
+</html>

@@ -1,0 +1,90 @@
+.reviews {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__header {
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-weight: 900;
+            font-size: 2.875rem;    
+        }
+        span{
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__carousel-block {
+        display: flex;
+
+        align-items: center;
+        gap: 1.25rem;
+        padding: 50px 0px;
+
+        
+    }
+
+    &__left-button {}
+
+    &__carousel {
+        overflow: hidden;
+        .reviews__carousel-main {
+            width: 1142px;
+            display: flex;
+            gap: rem(9);
+            transition: .4s;
+        }
+    }
+
+    &__item {
+        min-width: 1142px;
+        display: flex;
+        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+        border-radius: 4px;
+        background: #f1f1f1;
+        .item-content {
+            color: #424551;
+            font-weight: 400;
+            font-size: 1.25rem;
+            padding: rem(64) rem(105);
+            @include adaptiveValue("padding-top",64 ,15 );
+            @include adaptiveValue("padding-bottom",64 ,15 );
+            @include adaptiveValue("padding-right",105 ,35 );
+            @include adaptiveValue("padding-left",105 ,35 );
+            display: flex;
+            justify-content: start;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__author {
+        padding-top: 1.5625rem;
+        display: flex;
+        width: rem(240);
+        align-items: center;
+        gap: .3125rem;
+        .author-name {
+            gap: .4375rem;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                font-weight: 700;
+            }
+            span {
+                color: #787A80;
+                font-size: .875rem;
+
+            }
+        }
+    }
+
+    &__right-button {}
+}
